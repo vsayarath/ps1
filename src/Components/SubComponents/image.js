@@ -1,14 +1,26 @@
 import React from "react";
 
+class image extends React.Component{
 
-function Image(props) {
+	constructor(props) {
+	 super(props);
+	
+	this.state = {
+	  data : {
+		source: props.source
+	 }
+
+	}
+
+	}
+	render() {
 	return (
 	<div className="image">
-	<img src={props.source} alt="image"/>
+	<img src={this.state.data.source} alt="image"/>
 	</div>
 
 	);
-
 }
 
-export default Image;
+}
+export default image;
